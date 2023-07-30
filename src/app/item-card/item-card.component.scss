@@ -1,0 +1,29 @@
+.card{
+    // border: 1px solid black;
+    width: 400px;
+    display: block;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.imageBox{
+    width: 400px;
+    height: 400px;
+    // background-color: rgb(222,222,222);
+    border-radius: 15px;
+    align-content: center;
+    justify-content: center;
+    margin: 20px 0;
+}
+button{
+    border: none;
+    color: white;
+    background-color: #005baa;
+    height: 60px;
+    width: 90%;
+    margin: 5px 0;
+    border-radius: 10px;
+    font-weight: 200;
+  }

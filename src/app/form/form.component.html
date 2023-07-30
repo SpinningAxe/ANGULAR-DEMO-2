@@ -1,0 +1,22 @@
+<div class="FORM">
+    <h1>THÊM MÓN HÀNG</h1>
+    <h2>Tên Hàng</h2>
+    <input [(ngModel)]="nameInput" type="text" placeholder="Enter Name" style='width: 278px;'>
+
+    <h2>Cỡ Hộp</h2>
+    <input [(ngModel)]="boxSizeInput" type="number" placeholder="Enter Box Size" style='width: 278px;'>
+
+    <h2>Ảnh Hàng</h2>
+    <input [(ngModel)]="imageInput" type="text" placeholder="Enter Image Url" style='width: 278px;'>
+
+    <h2>Giá Hàng</h2>
+    <input [(ngModel)]="priceInput" type="number" placeholder="Enter Price" style='width: 278px;'>
+
+    <h2>Trong Kho</h2>
+    <input [(ngModel)]="inStockInput" type="number" placeholder="Enter Number In Stock" style='width: 278px;'>
+
+    <h2>Mô Tả</h2>
+    <textarea [(ngModel)]="descriptionInput" type="text" placeholder="Enter Description" style='width: 278px; height: 125px; margin-bottom: 20px;'></textarea><br>
+    
+    <button (click)="submit()" style="padding: 0 128px">Thêm Hàng</button>
+</div>

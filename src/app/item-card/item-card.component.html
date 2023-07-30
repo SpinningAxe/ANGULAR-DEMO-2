@@ -1,0 +1,37 @@
+<div class="card" (click)="viewDetail()">
+  <button
+    (click)="removeFromList()"
+    style="
+      border-radius: 30px;
+      background-color: #F6F1F1;
+      color: gray;
+    "
+  >
+    REMOVE FROM LISTING
+  </button>
+  <div class="imageBox">
+    <!-- <h1>Image: {{ item.image }}</h1> -->
+    <img src="{{ item.image }}" alt="mising" style="height: 400px; width: 400px;"/>
+  </div>
+  <div style="height: 90px">
+    <h2 style="color:#146C94">{{ item.name }}</h2>
+  </div>
+  <h2 style="margin: 20px 0 0 0; color:#146C94">Hộp {{ item.boxSize }} Cái</h2>
+  <div
+    style="
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-end;
+      height: max-content;
+      margin: 0 10px;
+    "
+  >
+    <h1 style="color: #0E2954;margin: 30px 0 10px 0;">{{ item.price }}.000đ</h1>
+    <h2 style="color: #0E2954;margin: 30px 0 10px 0;">Còn: {{ item.inStock }}</h2>
+    <!-- <h1>id: {{ item.id }}</h1> -->
+    <!-- <h1>description: {{ item.description }}</h1> -->
+  </div>
+  <button (click)="buyNow()" style="background-color: #176b87">Mua Ngay</button
+  ><br />
+  <button (click)="addToCart()">Thêm Vào Giỏ</button><br />
+</div>
