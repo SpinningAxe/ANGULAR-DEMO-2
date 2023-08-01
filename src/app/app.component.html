@@ -1,20 +1,4 @@
-<link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-/>
-
-<app-navbar (onCart)="showDialog()"></app-navbar>
-<app-menu-header></app-menu-header>
-<div class="menu">
-  <app-form style="margin: 2%" [itemList]="itemList"></app-form>
-  <div class="cardMenu" style="margin: 3% 0">
-    <app-item-card *ngFor="let item of itemList" [item]="item" (onCart)="addToCart(item)" (remove)="removeFromList(item)" (buy)="buyNow(item)"></app-item-card>
-  </div>
-</div>
-<dialog #cartElement>
-  <app-cart (onCloseCart)="closeDialog()" [cart]="cart" [itemList]="itemList"></app-cart>
-</dialog>
-
-<div class="footer">
-  <img src="./assets/FOOTER.png">
-</div>
+<router-outlet></router-outlet>
+<nav>
+  <a routerLink="/menuPage" routerLinkActive="active"> menu page </a>
+</nav>

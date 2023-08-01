@@ -1,0 +1,26 @@
+<div class="FORM">
+    <h1>CHỈNH SỬA HÀNG</h1>
+
+    <h1 style="color: black">ID HÀNG: {{item.id}}</h1>
+    
+    <h2>Tên Hàng</h2>
+    <input [(ngModel)]="item.name" type="text" placeholder="Update Name" style='width: 278px;'>
+
+    <h2>Cỡ Hộp</h2>
+    <input [(ngModel)]="item.boxSize" type="number" placeholder="Update Box Size" style='width: 278px;'>
+
+    <h2>Ảnh Hàng</h2>
+    <input [(ngModel)]="item.image" type="text" placeholder="Update Image Url" style='width: 278px;'>
+
+    <h2>Giá Hàng</h2>
+    <input [(ngModel)]="item.price" type="number" placeholder="Update Price" style='width: 278px;'>
+
+    <h2>Trong Kho</h2>
+    <input [(ngModel)]="item.inStock" type="number" placeholder="Update Number In Stock" style='width: 278px;'>
+
+    <h2>Mô Tả</h2>
+    <textarea [(ngModel)]="item.description" type="text" placeholder="Update Description" style='width: 278px; height: 125px; margin-bottom: 20px;'></textarea><br>
+    
+    <button (click)="submit()" style="width: 348px;">CHỈNH SỬA</button><br>
+    <button (click)="close()" style="width: 348px;">ĐÓNG</button>
+</div>

@@ -8,7 +8,7 @@ import { FormControl, FormGroup } from '@angular/forms';
   styleUrls: ['./form.component.scss'],
 })
 export class FormComponent {
-  @Input() public itemList: item[] = [];
+  @Output() onItemAdd = new EventEmitter()
 
   public nameInput='';
   public imageInput='';
@@ -20,7 +20,7 @@ export class FormComponent {
 
   submit() {
     let newItem: item = {
-      id: this.itemList.length+1,
+      id: Date.now(),
       name: this.nameInput,
       image: this.imageInput,
       description: this.descriptionInput,
@@ -33,6 +33,10 @@ export class FormComponent {
     if (newItem.name=='' && newItem.price==0 && newItem.boxSize==0 && newItem.inStock==0)
     {
       alert("ITEM HAS TOO MANY EMPTY ATTRIBUTE")
-    }else this.itemList.unshift(newItem);
+    }
+    else 
+    {
+      this.onItemAdd.emit(newItem);
+    };
   }
 }

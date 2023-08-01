@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "mythirdproject-d61c6": {
+      "hosting": {
+        "MyThirdProject": [
+          "mythirdproject-d61c6"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "mythirdproject-d61c6"
+  }
+}

@@ -1,0 +1,30 @@
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+/>
+
+<app-navbar (onCart)="showDialog()"></app-navbar>
+<app-menu-header></app-menu-header>
+<div class="menu">
+  <div *ngIf = "this.AuthService.user == null" style="width:250px;margin:0"></div>
+  
+  <app-form *ngIf = "this.AuthService.user != null && sidebar == 0" style="margin: 2%; width: 407px;" (onItemAdd)="addItem($event)"></app-form>
+  
+  <app-update-item-modal *ngIf = "this.AuthService.user != null && sidebar == 1" style="margin: 2%; width: 407px;" [item]="itemToUpdate" (onClose)="closeUpdateBar()"></app-update-item-modal>
+  
+  <div class="cardMenu" style="margin: 3% 0;">
+    <app-item-card *ngFor="let item of dataService.itemList" [item]="item" (onCart)="addToCart(item)" (remove)="dataService.deleteItemByItemID(item.id)" (buy)="buyNow(item)" (update)="updateItem(item)"></app-item-card>
+  </div>
+</div>
+<dialog #cartElement>
+  <app-cart (onCloseCart)="closeDialog()" [cart]="this.dataService.cart" [itemList]="this.dataService.itemList"></app-cart>
+</dialog>
+
+<dialog #cartElement>
+  <app-cart (onCloseUpdateForm)="closeDialog()"></app-cart>
+</dialog>
+
+<div class="footer">
+  <img src="./assets/FOOTER.png">
+</div>
+

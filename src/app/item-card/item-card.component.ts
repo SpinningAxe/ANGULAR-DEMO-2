@@ -1,5 +1,6 @@
 import { Component,Input, Output, EventEmitter } from '@angular/core';
 import { item } from '../model/item.model';
+import { AuthService } from 'src/app/service/authentication.service'
 
 
 @Component({
@@ -9,13 +10,15 @@ import { item } from '../model/item.model';
 })
 export class ItemCardComponent {
   @Input() item!: item;
-
   @Output() onCart = new EventEmitter();
   @Output() remove = new EventEmitter();
-  @Output() buy = new EventEmitter
+  @Output() buy = new EventEmitter();
+  @Output() update = new EventEmitter();
 
-  viewDetail(){
+  constructor (public AuthService: AuthService){}
 
+  updateDetail(){
+    this.update.emit()
   }
 
   removeFromList(){

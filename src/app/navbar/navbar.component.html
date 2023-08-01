@@ -1,8 +1,12 @@
 <div class="NavBar">
-<div class="Logo">
-    <img src="/assets/LOGO.png" alt="LOGO">
-</div>
-<div style="margin: 0 100px;">
+  <div class="Logo">
+    <img src="/assets/LOGO.png" alt="LOGO" />
+  </div>
+  <div style="margin: 0 100px; display: flex;">
+    <button (click)="resetList()" class="resetList">- RESET DANH SACH -</button>
     <button (click)="showCart()" class="CartButton">- GIỎ HÀNG -</button>
-</div>
+    <button *ngIf="this.AuthService.user == null" (click)="logIn()" class="CartButton">- SIGN IN -</button>
+    <button *ngIf="this.AuthService.user != null" (click)="logOut()" class="CartButton">- LOG OUT -</button>
+    
+  </div>
 </div>

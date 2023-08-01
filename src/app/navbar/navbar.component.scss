@@ -5,16 +5,19 @@
     justify-content: space-between;
     align-items: center;
     display: flex;
-    position:fixed;
+    // position:fixed;
 }
 .Logo{
     padding: 0 80px;
 }
 .CartButton{
-    padding: 0 170px;
+    width: 250px;
+    padding: 0 10px;
+    margin: 0 10px;
     background-color: white;
     border: none;
     color: gray;
-    height: 60px;
-    border-radius: 30px;font-weight: 200;
+    height: 60px; 
+    border-radius: 30px;
+    font-weight: 200;
 }

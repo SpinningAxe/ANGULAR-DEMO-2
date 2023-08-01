@@ -1,0 +1,14 @@
+.menu{
+    display: flex;
+}
+.cardMenu{
+    width: 80vw;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+.footer{
+    background-color: #005baa;
+    padding-bottom: 100px;
+    margin-top:200px;
+}
