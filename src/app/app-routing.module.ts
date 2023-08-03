@@ -10,6 +10,7 @@ const routes: Routes = [
     component: DetailPageComponent,
   },
   { path: 'menuPage', component: MenuPageComponent },
+  { path: 'cat-blog', loadChildren: () => import('./pages/cat-blog/cat-blog.module').then(m => m.CatBlogModule) },
 ];
 
 @NgModule({

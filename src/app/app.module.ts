@@ -18,6 +18,9 @@ import { StoreModule } from '@ngrx/store';
 import { MenuPageComponent } from './pages/menu-page/menu-page.component';
 import { UpdateItemModalComponent } from './update-item-modal/update-item-modal.component';
 
+import { HttpClientModule } from '@angular/common/http';
+import { CatPageComponent } from './pages/cat-page/cat-page.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,12 +30,14 @@ import { UpdateItemModalComponent } from './update-item-modal/update-item-modal.
     ItemCardComponent,
     CartComponent,
     MenuPageComponent,
-    UpdateItemModalComponent
+    UpdateItemModalComponent,
+    CatPageComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
+    HttpClientModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
     provideFirestore(() => getFirestore()),

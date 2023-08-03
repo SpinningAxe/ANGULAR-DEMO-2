@@ -15,18 +15,17 @@
     UPDATE DETAILS
   </button>
   
-  <nav>
-    <a routerLink="/detailPage">
+  <nav style="text-decoration: none;">
+    <a routerLink="/detailPage" style="text-decoration: none;">
       <div class="imageBox">
-        <!-- <h1>Image: {{ item.image }}</h1> -->
         <img
           src="{{ item.image }}"
           alt="mising"
           style="height: 400px; width: 400px"
         />
       </div>
-      <div style="height: 90px">
-        <h2 style="color: #146c94">{{ item.name }}</h2>
+      <div style="height: 90px; text-decoration:none ;">
+        <h2 style="color: #146c94; text-decoration: none;">{{ item.name }}</h2>
       </div>
     </a>
   </nav>
@@ -51,3 +50,4 @@
   ><br />
   <button (click)="addToCart()">Thêm Vào Giỏ</button><br />
 </div>
+
